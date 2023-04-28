@@ -19,7 +19,7 @@ const CardsSection = function () {
 			</p>
 		</div>
     <div className={styles.card3}>
-			<p className={styles.cardTitle}>MOBILE</p>
+			<p className={styles.cardTitle} translate="no">MOBILE</p>
 			<p className={styles.cardDescription}>
             O curso de Mobile é uma formação para quem deseja aprender a desenvolver aplicativos móveis nativos para iOS e Android.
 			</p>
