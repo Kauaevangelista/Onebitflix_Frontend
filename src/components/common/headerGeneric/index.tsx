@@ -25,4 +25,4 @@ interface props {
     );
   };
   
-  export default HeaderGeneric;
+  export default HeaderGeneric

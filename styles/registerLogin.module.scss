@@ -1,0 +1,92 @@
+@import "./colors.module.scss";
+.main {
+  background-image: linear-gradient(to bottom, #151515, black);
+}
+.formTitle {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 40px;
+
+  span {
+    color: $lightRed;
+
+    &:hover {
+        transition: 0.4s;
+        color: white;
+    }
+  }
+}
+.form {
+  width: 600px;
+  padding: 50px;
+  border: 1px solid $darkGray;
+  margin: 0 auto;
+
+  &:hover {
+    transition: 0.4s;
+    border: 1px solid $lightGray;
+  }
+}
+
+.label {
+    font-size: 14px;
+    font-weight: bold;
+    padding-top: 20px;
+  }
+  .input {
+    border-color: $darkGray;
+    background-color: transparent;
+    color: white;
+  
+    &::placeholder {
+      color: $lightGray;
+    }
+    &:focus {
+        transition: 0.4s;
+        border-color: $lightGray;
+      background-color: transparent;
+      color: white;
+      box-shadow: none;
+    }
+
+    &:hover {
+        border-color: $lightRed;
+        transition: 0.4s;
+    }
+  }
+  .inputName {
+    @extend .input;
+    text-transform: uppercase;
+    &::placeholder {
+      text-transform: none;
+    }
+  }
+  .formBtn {
+    display: block;
+    margin: 50px auto 0 auto;
+    border-color: $lightRed;
+    color: white;
+  
+    &:hover {
+        transition: 0.4s;
+      background-color: transparent;
+      color: $lightGray;
+      border-color: $darkRed;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .formTitle {
+      font-size: 30px;
+    }
+    .form {
+      width: 95%;
+    }
+  }
+
+  @media (max-width: 423px) {
+    .formTitle {
+      font-size: 24px;
+      text-align: center;
+    }
+  }
