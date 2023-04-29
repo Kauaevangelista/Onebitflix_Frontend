@@ -26,6 +26,15 @@
     transition: 0.4s;
     border: 1px solid $lightGray;
   }
+
+  .onebitflix {
+    color: $lightRed;
+
+    &:hover {
+        transition: 0.4s;
+        color: white;
+    }
+  }
 }
 
 .label {
