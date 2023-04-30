@@ -56,13 +56,13 @@ const handleRegister = async (event: FormEvent<HTMLFormElement>) => {
       <main className={styles.main}>
 	<HeaderGeneric logoUrl="/" btnUrl="/login" btnContent="Quero fazer login"/>
 	<Container className="py-5">
-		<p className={styles.formTitle}>Bem-vindo(a) ao <span>OneBitFlix!</span></p>
+		<p className={styles.formTitle}>Bem vindo(a) ao <span>OneBitFlix!</span></p>
     <Form className={styles.form} onSubmit={handleRegister}>
 	<p className="text-center">
 		<strong>Faça a sua conta!</strong>
 	</p>
 	<FormGroup>
-		<Label for="firstName" className={styles.label}>
+		<Label for="firstName" className={styles.label} translate="no">
 			NOME
 		</Label>
 		<Input
