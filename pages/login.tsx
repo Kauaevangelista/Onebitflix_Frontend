@@ -9,22 +9,27 @@ import ToastComponent from '@/src/components/common/toast'
 import authService from '@/src/services/authService'
 
 const Login = function () {
-    const router = useRouter();
+    const router = useRouter()
     const [toastColor, setToastColor] = useState("") 
-    const [toastIsOpen, setToastIsOpen] = useState(false);
-    const [toastMessage, setToastMessage] = useState("");
+    const [toastIsOpen, setToastIsOpen] = useState(false)
+    const [toastMessage, setToastMessage] = useState("")
 
+    useEffect(() => {
+        if (sessionStorage.getItem("onebitflix-token")) {
+          router.push("/home");
+      }
+    }, []);
     
     useEffect(() => {
         const registerSucess = router.query.registred
 
         if (registerSucess === 'true') {
             setToastColor('bg-success')
-            setToastIsOpen(true);
+            setToastIsOpen(true)
             setTimeout(() => {
-            setToastIsOpen(false);
-          }, 1000 * 3);
-            setToastMessage("Cadastro feito com sucesso");        
+            setToastIsOpen(false)
+          }, 1000 * 3)
+            setToastMessage("Cadastro feito com sucesso")        
         }
     }, [router.query])
 
@@ -42,11 +47,11 @@ const Login = function () {
             router.push('/home')
         } else {
             setToastColor('bg-danger')
-            setToastIsOpen(true);
+            setToastIsOpen(true)
             setTimeout(() => {
-            setToastIsOpen(false);
-          }, 1000 * 3);
-            setToastMessage("E-mail ou senha incorretos");       
+            setToastIsOpen(false)
+          }, 1000 * 3)
+            setToastMessage("E-mail ou senha incorretos")       
 
         }
     }
