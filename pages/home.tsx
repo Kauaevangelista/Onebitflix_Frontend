@@ -1,3 +1,4 @@
+import Footer from "@/src/components/common/footer";
 import HeaderAuth from "@/src/components/common/headerAuth";
 import FavoritesCourses from "@/src/components/homeAuth/favoriteCategory";
 import FeaturedCategory from "@/src/components/homeAuth/featuredCategory";
@@ -14,11 +15,12 @@ const HomeAuth = function () {
           <link rel="shortcut icon" href="/favicon.svg" type="image/x-icon" />
         </Head>
 	  <main>
-      <FeaturedSection/>
+    <FeaturedSection/>
     <NewestCategory/>
     <FavoritesCourses/>
     <FeaturedCategory/>
     <ListCategories />
+    <Footer />
   </main>
 </>
     );
