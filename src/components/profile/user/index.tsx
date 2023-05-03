@@ -24,7 +24,6 @@ const UserForm = function () {
 
   useEffect(() => {
     profileService.fetchCurrent().then((user) => {
-      console.log(user)
       setFirstName(user.firstName);
       setLastName(user.lastName);
       setPhone(user.phone);

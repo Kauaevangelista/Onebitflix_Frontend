@@ -97,6 +97,8 @@
     text-align: center;
     color: white;
     font-weight: bold;
+    display: block;
+    margin: 0 auto;
     font-size: 15px;
     padding: 6px 20px;
     transition: 0.4s;
@@ -131,6 +133,15 @@
       background-color: transparent;
       border-color: $lightRed;
       color: $lightGray;
+    }
+
+    &:active {
+      background-color: transparent;
+    }
+
+    &:focus {
+      background-color: transparent;
+      box-shadow: none;
     }
   }
 
@@ -187,5 +198,11 @@
     }
     .input {
       width: 100%;
+    }
+  }
+
+  @media (max-width: 435px) and ( min-width: 426px ) {
+    .formBtn {
+      margin-left: 29.8%;
     }
   }
