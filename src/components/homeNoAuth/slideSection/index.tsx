@@ -2,7 +2,7 @@ import { CourseType } from "../../../services/courseService";
 import { Container, Button } from 'reactstrap'
 import styles from "./styles.module.scss";
 import Link from "next/link";
-import SlideComponent from "../../common/slideComponent/indext";
+import SlideComponent from "../../common/slideComponent";
 
 interface props {
     newestCourses: CourseType[];

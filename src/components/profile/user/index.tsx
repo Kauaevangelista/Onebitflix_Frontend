@@ -4,6 +4,7 @@ import profileService from "@/src/services/profileService";
 import { useEffect, useState, FormEvent } from 'react'
 import ToastComponent from "../../common/toast";
 import { useRouter } from "next/router";
+import PageSpinner from "../../common/spinner";
 
 const UserForm = function () {
   const router = useRouter()
