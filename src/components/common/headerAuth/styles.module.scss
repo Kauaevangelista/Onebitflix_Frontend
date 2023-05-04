@@ -30,22 +30,16 @@
     background-color: transparent;
     color: white;
     border-color: $lightGray;
+    transition: 0.6s;
     &:focus {
-        transition: 0.6s;
       background-color: transparent;
       color: white;
-      border-color: $lightRed;
+      border-color: $darkRed;
       box-shadow: none;
     }
 
     &:hover {
-        transition: 0.5s;
-        border-color: $darkRed;
-
-        &::placeholder {
-            transition: 0.5s;
-            color: $lightGray;
-        }
+        border-color: $lightRed;
     }
   
     &::placeholder {
@@ -94,9 +88,9 @@
     margin: 5px 0px;
     font-weight: bold;
     cursor: pointer;
+    transition: 0.5s;
 
     &:hover {
-      transition: 0.5s;
       color: $lightRed;
     }
   }

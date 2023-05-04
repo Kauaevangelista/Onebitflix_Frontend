@@ -22,8 +22,8 @@
   font-weight: bold;
   font-size: 14px;
   padding: 10px 35px;
+  transition: 0.5s;
   &:hover {
-    transition: 0.5s;
     border-color: $lightRed;
     background-color: transparent;
     color: $lightGray;

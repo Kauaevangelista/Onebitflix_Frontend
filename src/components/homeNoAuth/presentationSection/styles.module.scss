@@ -33,12 +33,12 @@
   
     padding: 14px 30px;
     border: 2px solid $lightRed;
+    transition: 0.4s;
   
     .btnImg {
       width: 11px;
     }
     &:hover {
-        transition: 0.4s;
       border-color: $darkRed;
       color: $lightGray;
       background-color: transparent;

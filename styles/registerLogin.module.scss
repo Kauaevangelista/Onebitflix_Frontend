@@ -9,9 +9,9 @@
 
   span {
     color: $lightRed;
+    transition: 0.4s;
 
     &:hover {
-        transition: 0.4s;
         color: white;
     }
   }
@@ -21,17 +21,17 @@
   padding: 50px;
   border: 1px solid $darkGray;
   margin: 0 auto;
+  transition: 0.4s;
 
   &:hover {
-    transition: 0.4s;
     border: 1px solid $lightGray;
   }
 
   .onebitflix {
     color: $lightRed;
+    transition: 0.4s;
 
     &:hover {
-        transition: 0.4s;
         color: white;
     }
   }
@@ -46,12 +46,12 @@
     border-color: $darkGray;
     background-color: transparent;
     color: white;
+    transition: 0.4s;
   
     &::placeholder {
       color: $lightGray;
     }
     &:focus {
-        transition: 0.4s;
         border-color: $lightGray;
       background-color: transparent;
       color: white;
@@ -60,7 +60,6 @@
 
     &:hover {
         border-color: $lightRed;
-        transition: 0.4s;
     }
   }
   .inputName {
@@ -75,9 +74,9 @@
     margin: 50px auto 0 auto;
     border-color: $lightRed;
     color: white;
+    transition: 0.4s;
   
     &:hover {
-        transition: 0.4s;
       background-color: transparent;
       color: $lightGray;
       border-color: $darkRed;

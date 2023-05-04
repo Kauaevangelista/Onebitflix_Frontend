@@ -33,9 +33,9 @@
         text-decoration: none;
         color: $lightRed;
         border-bottom: 2px solid transparent;
+        transition: 0.4s;
 
         &:hover {
-          transition: 0.4s;
           border-bottom: 2px solid $mediumGray;
 
         }

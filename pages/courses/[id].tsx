@@ -10,6 +10,7 @@ import { Button, Container } from "reactstrap";
 import PageSpinner from "@/src/components/common/spinner";
 import EpisodeList from "@/src/components/episodeList";
 import Footer from "@/src/components/common/footer";
+import Link from "next/link";
 
 const CoursePage = function () {
   const [course, setCourse] = useState<CourseType>();
@@ -17,6 +18,16 @@ const CoursePage = function () {
   const [favorited, setFavorited] = useState(false);
   const router = useRouter();
   const { id } = router.query;
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    if (!sessionStorage.getItem("onebitflix-token")) {
+      router.push("/login");
+    } else {
+      setLoading(false);
+    }
+  }, []);
+
 
   const getCourse = async function () {
     if (typeof id !== "string") return;
@@ -27,9 +38,10 @@ const CoursePage = function () {
       setCourse(res.data);
       setLiked(res.data.liked);
       setFavorited(res.data.favorited);
+
     }
   };
-
+    
   useEffect(() => {
     getCourse();
   }, [id]);
@@ -60,6 +72,19 @@ const CoursePage = function () {
 
   if (course === undefined) return <PageSpinner/>
 
+
+  if (loading) {
+    return <PageSpinner />;
+  }
+
+        const handleEpisodePlayer = () => {
+          if (course?.episodes !== undefined) {
+            router.push(`/courses/episodes/${course.episodes[0].order - 1}?courseid=${course.id}&episodeid=${course.episodes[0].id}`);
+          }        
+      }
+
+
+
   return (
     <>
       <Head>
@@ -80,7 +105,7 @@ const CoursePage = function () {
   <Container className={styles.courseInfo}>
 	  <p className={styles.courseTitle}>{course?.name}</p>
     <p className={styles.courseDescription}>{course?.synopsis}</p>
-    <Button outline className={styles.courseBtn}  disabled={course?.episodes?.length === 0 ? true : false}>
+    <Button outline className={styles.courseBtn} onClick={handleEpisodePlayer}  disabled={course?.episodes?.length === 0 ? true : false}>
 	    ASSISTIR AGORA!
       <img
       src="/buttonPlay.svg"

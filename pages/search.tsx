@@ -7,6 +7,7 @@ import { useState, useEffect } from 'react'
 import { Container } from "reactstrap";
 import SearchCard from "@/src/components/searchCard";
 import Footer from "@/src/components/common/footer";
+import PageSpinner from "@/src/components/common/spinner";
 
 const Search = function () {
     const router = useRouter();
@@ -14,6 +15,18 @@ const Search = function () {
 
     const [searchResult, setSearchResult] = useState<CourseType[]>([]);
 
+    const [loading, setLoading] = useState(true);
+  
+    useEffect(() => {
+      if (!sessionStorage.getItem("onebitflix-token")) {
+        router.push("/login");
+      } else {
+        setLoading(false);
+      }
+    }, []);
+  
+    
+    
     const searchCourses = async function () {
 	  const res = await courseService.getSearch(searchName);
 
@@ -24,8 +37,12 @@ const Search = function () {
 	searchCourses();
 }, [searchName]);
 
-  return (
-    <>
+if (loading) {
+  return <PageSpinner />;
+}
+
+return (
+  <>
       <Head>
         <title>Onebitflix - {searchName}</title>
         <link rel="shortcut icon" href="/favicon.svg" type="image/x-icon" />
