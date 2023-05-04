@@ -1,0 +1,101 @@
+.episodeTitle {
+    font-size: 36px;
+    font-weight: bold;
+  }
+  .episodeButtonDiv {
+    display: flex;
+    gap: 100%;
+    margin-top: 30px;
+    justify-content: center;
+    align-items: center;
+    width: 58vw;
+  }
+
+.episodeButton {
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.4s;
+
+    &:active {
+        color: transparent;
+        background-color: transparent;
+        border-color: transparent;
+        outline: none;
+    }
+
+    &:focus {
+        outline: none;
+        color: transparent;
+        background-color: transparent;
+        border-color: transparent;
+        box-shadow: none;
+    }
+    &:hover {
+        color: transparent;
+        background-color: transparent;
+        border-color: transparent;
+        outline: none;
+    }
+    &:focus-visible {
+        color: transparent;
+        background-color: transparent;
+        border-color: transparent;
+        outline: none;
+    }
+}
+
+  .arrowImg {
+    width: 20px;
+    transition: 0.4s;
+
+    &:active {
+        color: transparent;
+        background-color: transparent;
+        border-color: transparent;
+        outline: none;
+    }
+
+    &:focus {
+        outline: none;
+        color: transparent;
+        background-color: transparent;
+        border-color: transparent;
+        box-shadow: none;
+    }
+    &:hover {
+        color: transparent;
+        background-color: transparent;
+        border-color: transparent;
+        transform: scale(1.2);
+        outline: none;
+    }
+    &:focus-visible {
+        color: transparent;
+        background-color: transparent;
+        border-color: transparent;
+        outline: none;
+    }
+  }
+
+  .player {
+    max-width: 100%;
+  }
+
+  @media (max-width: 425px) {
+	.episodeTitle {
+    font-size: 20px;
+    padding: 0px 10px;
+    word-wrap: break-word;
+  }
+  .player {
+    max-width: 100%;
+    margin-top: -60px;
+  }
+  @media (max-width: 320px) {
+    .player {
+      margin-top: -100px;
+    }
+  }
+}
