@@ -23,6 +23,7 @@
   font-size: 14px;
   padding: 10px 35px;
   transition: 0.5s;
+  margin-top: 40px;
   &:hover {
     border-color: $lightRed;
     background-color: transparent;
@@ -61,13 +62,14 @@
     }
     .description {
       width: 95%;
-      font-size: 14px;
+      font-size: 15px;
       margin-top: 25px;
       height: 110px;
     }
     .button {
       font-size: 12px;
       padding: 10px 20px;
+      margin-top: 20px;
     }
     .buttonImg {
       width: 8px;

@@ -39,6 +39,7 @@ const EpisodePlayer = function () {
     
     const handleGetEpisodeTime = async () => {
       const res = await watchEpisodeService.getWatchTime(episodeId);
+      console.log(res)
       if (res.data !== null) {
         setGetEpisodeTime(res.data.seconds);
       }
