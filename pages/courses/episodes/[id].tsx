@@ -34,6 +34,7 @@ const EpisodePlayer = function () {
       } else {
         setLoading(false);
       }
+      // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     
@@ -54,6 +55,7 @@ const EpisodePlayer = function () {
 
     useEffect(() => {
       handleGetEpisodeTime();
+            // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [router]);
 
     const handlePlayerTime = () => {
@@ -87,6 +89,7 @@ const EpisodePlayer = function () {
 
       useEffect(() => {
         getCourse();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
       }, [courseId]);
 
       if (course?.episodes == undefined) return <PageSpinner />;
@@ -133,7 +136,9 @@ const EpisodePlayer = function () {
 	/>
 )}
 <div className={styles.episodeButtonDiv}>
+  {/* eslint-disable-next-line react-hooks/exhaustive-deps */}
 	<Button className={styles.episodeButton} disabled={episodeOrder === 0 ? true : false} onClick={handleLastEpisode}><img src="/episode/iconArrowLeft.svg" alt="setaEsquerda" className={styles.arrowImg}/></Button>
+  {/* eslint-disable-next-line react-hooks/exhaustive-deps */}
 	<Button className={styles.episodeButton} disabled={episodeOrder + 1 === course.episodes.length ? true : false} onClick={handleNextEpisode}><img src="/episode/iconArrowRight.svg" alt="setaDireita" className={styles.arrowImg}/></Button>
 </div>
 <p className="text-center pb-4">

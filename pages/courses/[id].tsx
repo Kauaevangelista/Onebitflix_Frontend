@@ -26,6 +26,7 @@ const CoursePage = function () {
     } else {
       setLoading(false);
     }
+            // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
 
@@ -44,6 +45,7 @@ const CoursePage = function () {
     
   useEffect(() => {
     getCourse();
+            // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id]);
 
   const handleLikeCourse = async () => {

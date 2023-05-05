@@ -18,6 +18,7 @@ const Login = function () {
         if (sessionStorage.getItem("onebitflix-token")) {
           router.push("/home");
       }
+              // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
     
     useEffect(() => {

@@ -17,6 +17,7 @@ useEffect(() => {
 	if (sessionStorage.getItem("onebitflix-token")) {
 	  router.push("/home");
   }
+          // eslint-disable-next-line react-hooks/exhaustive-deps
 }, []);
 
 const handleRegister = async (event: FormEvent<HTMLFormElement>) => {
@@ -58,7 +59,7 @@ const handleRegister = async (event: FormEvent<HTMLFormElement>) => {
 		  <Head>
             <title>Onebitflix - Registro</title>
             <link rel="shortcut icon" href="/favicon.svg" type="image/x-icon" />
-            <script src="https://jsuites.net/v4/jsuites.js"></script>
+            <script src="https://jsuites.net/v4/jsuites.js" async></script>
       </Head>
       <main className={styles.main}>
 	<HeaderGeneric logoUrl="/" btnUrl="/login" btnContent="Quero fazer login"/>

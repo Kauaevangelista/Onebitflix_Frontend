@@ -23,6 +23,7 @@ const Search = function () {
       } else {
         setLoading(false);
       }
+              // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
   
     
@@ -35,6 +36,7 @@ const Search = function () {
 
   useEffect(() => {
 	searchCourses();
+          // eslint-disable-next-line react-hooks/exhaustive-deps
 }, [searchName]);
 
 if (loading) {
